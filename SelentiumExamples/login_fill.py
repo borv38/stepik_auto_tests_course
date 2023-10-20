@@ -20,6 +20,7 @@ class TestMainPage1():
         input2.send_keys("passfortestEr6")
         button_dva = browser.find_element(By.CSS_SELECTOR, "#login_form > button")
         button_dva.click()
+        time.sleep(10)
         input3 = browser.find_element(By.CSS_SELECTOR, 'textarea[placeholder="Напишите ваш ответ здесь..."]')
         input3.clear()
         input3.send_keys(math.log(int(time.time())))
