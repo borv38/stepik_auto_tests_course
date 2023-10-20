@@ -4,11 +4,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import math
-
-link = "https://stepik.org/lesson/236895/step/1"
 class TestMainPage1():
 
+    @pytest.mark.parametrize('tempor', ["236895", "236896", "236897", "236898", "236899", "236903", "236904", "236905"])
     def test_guest_should_see_login_link(self, browser):
+        link = f"https://stepik.org/lesson/{tempor}/step/1"
         browser.get(link)
         button = browser.find_element(By.ID, "ember33")
         button.click()
