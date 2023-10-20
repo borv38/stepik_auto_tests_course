@@ -11,7 +11,7 @@ class TestMainPage1():
         #time.sleep(15)
         button = browser.find_element(By.CSS_SELECTOR, "#ember36")
         button.click()
-        #time.sleep(15)
+        print("\nButton found, clicked")
         input1 = browser.find_element(By.ID, "id_login_email")
         input1.send_keys("borv38@gmail.com")
         input2 = browser.find_element(By.ID, "id_login_password")
