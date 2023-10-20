@@ -22,7 +22,7 @@ class TestMainPage1():
         answer = math.log(int(time.time()))
         print("answer calculated")
         time.sleep(15)
-        input3 = browser.find_element(By.ID, "ember132")
+        input3 = browser.find_element(By.CSS_SELECTOR, 'textarea[placeholder="Напишите ваш ответ здесь..."]')
         input3.send_keys(answer)
         button_sub = browser.find_element(By.CSS_SELECTOR, "#ember84 > div > section > div > div.attempt__inner > div.attempt__actions > button")
         button_sub.click()
