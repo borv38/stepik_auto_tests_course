@@ -29,5 +29,6 @@ class TestMainPage1():
         time.sleep(10)
         welcome_text_elt = browser.find_element(By.CSS_SELECTOR, "p.smart-hints__hint")
         welcome_text = welcome_text_elt.text
-        assert "Correct!" == welcome_text
+        assert "Correct!" == welcome_text, "not passed"
         print("passed")
+        time.sleep(10)
