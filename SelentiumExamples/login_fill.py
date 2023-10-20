@@ -25,6 +25,7 @@ class TestMainPage1():
         print("answer calculated")
         input3.send_keys(answer)
         print("ответ введен")
+        time.sleep(2)
         button_sub = browser.find_element(By.CLASS_NAME, "submit-submission")
         button_sub.click()
         print("button pressed")
