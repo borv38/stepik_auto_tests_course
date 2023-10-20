@@ -32,4 +32,3 @@ class TestMainPage1():
         welcome_text = welcome_text_elt.text
         assert "Correct!" == welcome_text, "not passed"
         print("passed")
-        time.sleep(10)
