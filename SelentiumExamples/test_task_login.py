@@ -8,10 +8,10 @@ class TestMainPage1():
 
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
-        time.sleep(15)
+        #time.sleep(15)
         button = browser.find_element(By.CSS_SELECTOR, "#ember36")
         button.click()
-        time.sleep(15)
+        #time.sleep(15)
         input1 = browser.find_element(By.CSS_SELECTOR, "#id_login_email")
         input1.send_keys("borv38@gmail.com")
         input2 = browser.find_element(By.CSS_SELECTOR, "#id_login_password")
