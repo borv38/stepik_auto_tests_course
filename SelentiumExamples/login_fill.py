@@ -26,11 +26,10 @@ class TestMainPage1():
         input3.send_keys(answer)
         print("ответ введен")
         time.sleep(3)
-        button_sub = browser.find_element(By.CSS_SELECTOR, "#ember84 > div > section > div > div.attempt__inner > div.attempt__actions > button")
+        button_sub = browser.find_element(By.CLASS_NAME, "submit-submission")
         button_sub.click()
         time.sleep(15)
         welcome_text_elt = browser.find_element(By.ID, "ember119")
         welcome_text = welcome_text_elt.text
         self.assertEqual("Correct!", welcome_text, "Failed")
         print("passed")
-
