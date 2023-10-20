@@ -23,9 +23,9 @@ class TestMainPage1():
         button = browser.find_element(By.CSS_SELECTOR, "#ember36")
         button.click()
 
-        input1 = browser.find_element(By.CSS_SELECTOR, '#id_login_email')
+        input1 = browser.find_element(By.CSS_SELECTOR, 'inputid_login_email')
         input1.send_keys("borv38@gmail.com")
-        input2 = browser.find_element(By.CSS_SELECTOR, '#id_login_password')
+        input2 = browser.find_element(By.CSS_SELECTOR, 'input#id_login_password')
         input2.send_keys("passfortestEr6")
 
         time.sleep(15)
