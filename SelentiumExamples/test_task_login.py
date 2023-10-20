@@ -23,12 +23,11 @@ class TestMainPage1():
         button = browser.find_element(By.CSS_SELECTOR, "#ember36")
         button.click()
 
-        input1 = browser.switch_to.alert
+        input1 = browser.find_element(By.CSS_SELECTOR, 'input.form control.first[placeholder="E-mail"]')
         input1.send_keys("borv38@gmail.com")
-        input1.accept()
-        input2 = browser.switch_to.alert
+        input2 = browser.find_element(By.CSS_SELECTOR, 'input.form control.first[placeholder="Пароль"]')
         input2.send_keys("passfortestEr6")
-        input2.accept()
+
         time.sleep(15)
 
 
