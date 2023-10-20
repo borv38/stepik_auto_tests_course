@@ -28,8 +28,9 @@ class TestMainPage1():
         time.sleep(3)
         button_sub = browser.find_element(By.CLASS_NAME, "submit-submission")
         button_sub.click()
-        time.sleep(15)
-        welcome_text_elt = browser.find_element(By.ID, "ember119")
+        print("button pressed")
+        time.sleep(5)
+        welcome_text_elt = browser.find_element(By.CLASS_NAME, "smart-hints ember-view lesson__hint")
         welcome_text = welcome_text_elt.text
         self.assertEqual("Correct!", welcome_text, "Failed")
         print("passed")
