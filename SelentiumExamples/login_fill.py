@@ -1,8 +1,7 @@
 import pytest
 import unittest
+from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import time
 import math
 
@@ -21,15 +20,14 @@ class TestMainPage1():
         input2.send_keys("passfortestEr6")
         button_dva = browser.find_element(By.CSS_SELECTOR, "#login_form > button")
         button_dva.click()
-       # input3 = browser.find_element(By.CSS_SELECTOR, 'textarea[placeholder="Напишите ваш ответ здесь..."]')
-        input3 = WebDriverWait(browser, 30).until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'textarea[placeholder="Напишите ваш ответ здесь..."]')
+        input3 = browser.find_element(By.CSS_SELECTOR, 'textarea[placeholder="Напишите ваш ответ здесь..."]')
         input3.clear()
         input3.send_keys(math.log(int(time.time())))
         print("ответ введен")
         button_sub = browser.find_element(By.CSS_SELECTOR, "button.submit-submission")
         button_sub.click()
         print("button pressed")
-        time.sleep(5)
+        time.sleep(10)
         welcome_text_elt = browser.find_element(By.CSS_SELECTOR, "p.smart-hints__hint")
         welcome_text = welcome_text_elt.text
         assert "Correct!" == welcome_text, "not passed"
