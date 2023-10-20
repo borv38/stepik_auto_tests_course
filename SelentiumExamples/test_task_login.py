@@ -9,7 +9,7 @@ class TestMainPage1():
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
         #time.sleep(15)
-        button = browser.find_element(By.CSS_SELECTOR, "#ember36")
+        button = browser.find_element(By.ID, "ember36")
         button.click()
         print("\nButton found, clicked")
         input1 = browser.find_element(By.ID, "id_login_email")
