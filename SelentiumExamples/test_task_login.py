@@ -19,6 +19,7 @@ class TestMainPage1():
 
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
+        time.sleep(15)
         button = browser.find_element(By.CLASS_NAME, "ember-view navbar__auth navbar__auth_login st-link st-link_style_button")
         button.click()
 
