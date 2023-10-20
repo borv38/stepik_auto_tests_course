@@ -9,7 +9,7 @@ class TestMainPage1():
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
         time.sleep(10)
-        button = browser.find_element(By.ID, "ember36")
+        button = browser.find_element(By.CLASS_NAME, "ember-view navbar__auth navbar__auth_login st-link st-link_style_button")
         button.click()
         print("\nButton found, clicked")
         input1 = browser.find_element(By.ID, "id_login_email")
@@ -19,6 +19,8 @@ class TestMainPage1():
         button_dva = browser.find_element(By.CSS_SELECTOR, "#login_form > button")
         button_dva.click()
         time.sleep(15)
+
+
 
 
 
