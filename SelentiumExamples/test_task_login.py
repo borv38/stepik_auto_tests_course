@@ -8,7 +8,6 @@ class TestMainPage1():
 
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
-        #time.sleep(15)
         button = browser.find_element(By.ID, "ember36")
         button.click()
         print("\nButton found, clicked")
