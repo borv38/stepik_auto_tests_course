@@ -27,7 +27,7 @@ class TestMainPage1():
         input1.send_keys("borv38@gmail.com")
         input2 = browser.find_element(By.CSS_SELECTOR, "#id_login_password")
         input2.send_keys("passfortestEr6")
-        button_dva = browser.find_element(By,CSS_SELECTOR, "#login_form > button")
+        button_dva = browser.find_element(By.CSS_SELECTOR, "#login_form > button")
         button_dva.click()
         time.sleep(15)
 
